@@ -14,8 +14,8 @@ body {
 }
 
 .navbar {
-  /* padding: 5px 0; */
   background-color: #086972;
+  text-decoration: none;
 }
 
 .container {
@@ -25,22 +25,24 @@ body {
   margin: 0 auto;
 }
 
-.header a {
-  color: rgba(255, 255, 255, 0.877);
+.header {
+  /* color: #fff; */
   text-decoration: none;
 }
 
 .logo {
+  color: #fff;
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 1.2em;
   width: 20%;
   padding: 15px 0;
   text-align: center;
+  text-decoration: none;
 }
 
 .logo:hover {
-  color: aqua;
+  color: #00ffff;
 }
 
 .menu {
@@ -57,6 +59,11 @@ body {
   transition: background-color 0.4s;
 }
 
+.menu-link {
+  color: #fff;
+  text-decoration: none;
+}
+
 .menu-item:hover {
   background-color: rgba(21, 240, 119, 0.212);
   line-height: 45px;
@@ -67,4 +74,77 @@ body {
   padding: 0 15px;
   font-size: 16px;
   text-transform: uppercase;
+}
+
+.intro {
+  display: flex;
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.intro-inner {
+  display: flex;
+  padding: 60px 0;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-img {
+  width: 350px;
+  /* border-radius: 50%; */
+}
+
+.intro-text {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 60%;
+}
+
+.intro-text h1,
+.intro-text h3 {
+  margin: 0 0 15px;
+}
+
+.intro-text h1 {
+  font-weight: bolder;
+  color: #086972;
+}
+
+.intro-text h3 {
+  font-weight: bold;
+  color: #086972;
+}
+
+.intro-text p {
+  font-style: normal;
+  color: #086972;
+}
+
+.contacts {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.contacts h3 {
+  font-size: 1.17em;
+  color: #086972;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contact-menu {
+  display: flex;
+  justify-content: space-around;
+  color: #086972;
+}
+
+.contact-menu-items {
+  list-style: none;
+  /* text-align: center; */
+  padding: 0;
+}
+
+.contact-menu a {
+  text-align: center;
 }
