@@ -109,7 +109,7 @@ body {
 }
 
 .contact-block {
-  margin-bottom: 35px;
+  margin-bottom: 45px;
 }
 .contacts h3 {
   font-size: 1.5em;
@@ -134,9 +134,9 @@ body {
 }
 
 .skills {
-  margin-bottom: 35px;
+  margin-bottom: 45px;
+  padding: 25px 0;
   background-color: #086972;
-  border: 1px solid black;
 }
 
 .skills-block {
@@ -145,6 +145,7 @@ body {
 }
 
 .skills-block h3 {
+  margin: 35px 0 24px;
   font-size: 1.5em;
   color: #fff;
   text-transform: uppercase;
@@ -152,6 +153,7 @@ body {
 }
 
 .skills-menu {
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   padding: 0;
@@ -171,4 +173,84 @@ body {
 
 .skills-menu-item:hover {
   color: #00ffff;
+}
+
+.code-block h3 {
+  font-size: 1.5em;
+  color: #086972;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.code-block p {
+  margin-bottom: 30px;
+  color: #086972;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+}
+
+.code-ex {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 45px;
+  color: #fff;
+  background-color: #086972;
+  border-radius: 5px;
+}
+
+.code-ex pre {
+  padding: 20px 0;
+}
+
+.languages-block {
+  margin-bottom: 45px;
+}
+
+.languages-block h3 {
+  font-size: 1.5em;
+  color: #086972;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.languages-block ul {
+  color: #086972;
+  font-style: normal;
+  line-height: 2;
+}
+
+.education {
+  background-color: #086972;
+  margin-bottom: 45px;
+}
+
+.education-block {
+  padding: 25px 0;
+}
+
+.education-block h3 {
+  font-size: 1.5em;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.education-block ul {
+  color: #fff;
+  font-style: normal;
+  line-height: 2;
+}
+
+.footer {
+  margin-bottom: 50px;
+}
+.footer p {
+  color: #086972;
+  text-align: center;
+}
+
+.footer a {
+  padding-left: 15px;
+  color: blue;
 }
