@@ -5,31 +5,38 @@ html {
 *,
 *:before,
 *:after {
+  margin: 0;
   box-sizing: inherit;
 }
 
 body {
+  background-color: rgba(0, 0, 0, 0.836);
   font-family: "Montserrat", sans-serif;
   margin: 0;
-}
-
-.navbar {
-  background-color: #086972;
-  text-decoration: none;
-}
-
-.container {
-  width: 1140px;
-  margin: 0 auto;
-}
-
-.navbar-nav {
-  display: flex;
-  justify-content: space-between;
+  min-width: 1140px;
 }
 
 .header {
+  width: 100%;
+  background: #086972;
   text-decoration: none;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.navbar-nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-height: 54px;
+}
+@media (max-width: 479px) {
+  .navbar-nav {
+    min-height: 30px;
+  }
 }
 
 .logo {
@@ -48,49 +55,101 @@ body {
 }
 
 .menu {
-  display: flex;
-  align-items: center;
-  width: 70%;
-  padding: 0;
-  font-size: 0;
+  position: absolute;
+  top: 54px;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  padding: 15px 15px;
+  margin: 0;
   list-style: none;
-  justify-content: flex-end;
+  background-color: black;
+  width: 100%;
 }
 
 .menu-item {
+  padding: 10px 0;
   transition: background-color 0.4s;
 }
 
 .menu-link {
   color: #fff;
   text-decoration: none;
-}
-
-.menu-item:hover {
-  background-color: rgba(21, 240, 119, 0.212);
-  line-height: 45px;
-}
-
-.menu-link {
   cursor: pointer;
   padding: 0 15px;
   font-size: 16px;
   text-transform: uppercase;
 }
+@media (min-width: 1024px) {
+  .navbar-nav {
+    align-items: center;
+  }
+  .button-toggle {
+    display: none;
+  }
+  .menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #086972;
+  }
+}
+
+@media (max-width: 479px) {
+  .intro-text {
+    font-size: 50px;
+  }
+  /* .menu-link {
+    font-size: 18px;
+  }
+  .navbar {
+    font-size: 50px;
+  } */
+}
+
+.menu-item:hover {
+  background-color: rgba(21, 240, 119, 0.212);
+  border-radius: 5px;
+}
+.button-toggle {
+  width: 54px;
+}
 
 .intro-inner {
   display: flex;
   padding: 60px 0;
-  gap: 40px;
+  gap: 92px;
   justify-content: center;
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .intro-inner {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 0;
+  }
+  .intro-img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+  .intro-text {
+    padding: 20px 20px 10px;
+    text-align: center;
+  }
+}
+
 .intro-img {
+  border: 1px solid white;
+  border-radius: 5px;
   width: 350px;
 }
 
 .intro-text {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 20px 20px 10px;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   width: 60%;
@@ -100,33 +159,43 @@ body {
 .intro-text h3 {
   margin: 0 0 15px;
   font-weight: bold;
-  color: #086972;
+  color: #fff;
 }
 
 .intro-text p {
   font-style: normal;
-  color: #086972;
+  color: #fff;
 }
 
 .contact-block {
+  border: 1px solid white;
+  border-radius: 5px;
   margin-bottom: 45px;
+  padding: 20px 0 20px 0;
 }
 .contacts h3 {
   font-size: 1.5em;
-  color: #086972;
+  color: #fff;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .contact-menu {
   display: flex;
   justify-content: space-around;
   padding-left: 0;
-  color: #086972;
+  color: #fff;
 }
 
 .contact-menu-items {
   list-style: none;
+}
+.contact-menu-items h4 {
+  padding: 5px 0;
+}
+.contact-menu-items a {
+  color: #3676ec;
 }
 
 .contact-menu a {
@@ -177,14 +246,15 @@ body {
 
 .code-block h3 {
   font-size: 1.5em;
-  color: #086972;
+  color: #fff;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .code-block p {
   margin-bottom: 30px;
-  color: #086972;
+  color: #fff;
   font-style: italic;
   font-weight: bold;
   text-align: center;
@@ -204,18 +274,21 @@ body {
 }
 
 .languages-block {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 20px 0 20px 0;
   margin-bottom: 45px;
 }
 
 .languages-block h3 {
   font-size: 1.5em;
-  color: #086972;
+  color: #fff;
   text-transform: uppercase;
   text-align: center;
 }
 
 .languages-block ul {
-  color: #086972;
+  color: #fff;
   font-style: normal;
   line-height: 2;
 }
@@ -245,12 +318,18 @@ body {
 .footer {
   margin-bottom: 50px;
 }
+
+.footer-cont {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 20px 0 20px 0;
+}
 .footer p {
-  color: #086972;
+  color: #fff;
   text-align: center;
 }
 
 .footer a {
   padding-left: 15px;
-  color: blue;
+  color: #3676ec;
 }
